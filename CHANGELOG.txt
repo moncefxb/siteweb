@@ -1,0 +1,13 @@
+CHANGES IN THIS DEMO REVISION
+=============================
+
+1. Preserved the original visual direction: deep green, warm sand/cream surfaces, large destination photography, rounded controls and the same travel-brand concept.
+2. Added a three-language selector menu (Arabic, French, English) instead of one-click toggling.
+3. Added English translations across navigation, hero, trip form, destination cards, process, testimonials, FAQs, footer and form feedback.
+4. Corrected language direction automatically: Arabic uses RTL; French and English use LTR.
+5. Added local-language persistence using browser local storage.
+6. Added destination filters, destination-to-form shortcuts, mobile navigation and accessible accordion behavior.
+7. Added fictional sample destinations, indicative sample prices, a fictional address and placeholder contact details.
+8. Marked the page as a demo and added explicit disclaimers for fictional offers, prices and testimonials.
+9. Made the trip form display a local preview only. It does not transmit personal information, contact an actual phone number or create a booking.
+10. Kept the project static: no build step, database or server required.
