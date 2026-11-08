@@ -105,8 +105,8 @@
 
 /* LTR about-card spacing: prevent the vertical motto from touching the quote. */
 :root[lang="fr"] .about__vertical,
-:root[lang="en"] .about__vertical{inset-inline-end:50px}
+:root[lang="en"] .about__vertical{inset-inline-end:64px}
 :root[lang="fr"] .about__quote-mark,
 :root[lang="fr"] .about__frame p,
 :root[lang="en"] .about__quote-mark,
-:root[lang="en"] .about__frame p{transform:translateX(12px)}
+:root[lang="en"] .about__frame p{transform:translateX(22px)}
