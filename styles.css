@@ -171,3 +171,96 @@
   .language-trigger { gap: 5px; }
   .menu-toggle { flex: 0 0 38px; }
 }
+
+
+/* Refined About panel: clearer separation between the motto and the quotation. */
+.about__frame {
+  border: 1px solid rgba(217,187,128,.25);
+  border-radius: 2px;
+  background: linear-gradient(145deg, #263a40 0%, #1d2e33 62%, #17242a 100%);
+  box-shadow: 0 26px 64px rgba(17,28,34,.16), inset 0 0 0 8px rgba(255,255,255,.018);
+}
+.about__message { display: contents; }
+
+/* French and English use longer text: give the upper motto and lower quote distinct zones. */
+html[lang="fr"] .about__visual,
+html[lang="en"] .about__visual { min-height: 540px; }
+html[lang="fr"] .about__frame,
+html[lang="en"] .about__frame {
+  height: 510px;
+  padding: 48px 48px 32px;
+}
+html[lang="fr"] .about__vertical,
+html[lang="en"] .about__vertical {
+  top: 34px;
+  inset-inline: 28px;
+  font-size: clamp(7px, calc(.48vw + 5px), 8.8px);
+  letter-spacing: .065em;
+  padding-bottom: 20px;
+}
+html[lang="fr"] .about__message,
+html[lang="en"] .about__message {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding-top: 25px;
+  border-top: 1px solid rgba(217,187,128,.28);
+}
+html[lang="fr"] .about__quote-mark,
+html[lang="en"] .about__quote-mark {
+  font-size: 54px;
+  line-height: .65;
+  margin: 0 0 9px;
+}
+html[lang="fr"] .about__frame p,
+html[lang="en"] .about__frame p {
+  max-width: 370px;
+  font-size: clamp(22px, 1.9vw, 27px);
+  line-height: 1.43;
+  margin: 0 0 22px;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+}
+html[lang="fr"] .about__frame-index,
+html[lang="en"] .about__frame-index {
+  display: block;
+  font-size: 8px;
+  letter-spacing: .19em;
+}
+
+@media (min-width: 1100px) {
+  .about__visual { min-height: 550px; }
+  .about__frame { width: min(100%, 470px); height: 500px; padding: 50px 50px 38px; }
+  html[lang="fr"] .about__frame,
+  html[lang="en"] .about__frame { height: 530px; padding: 50px 50px 34px; }
+  .about__stamp { inset-inline-end: -9px; bottom: 7px; }
+}
+
+@media (max-width: 560px) {
+  .about__visual { min-height: 430px; }
+  .about__frame { height: 410px; padding: 36px 28px; }
+  html[lang="fr"] .about__visual,
+  html[lang="en"] .about__visual { min-height: 460px; }
+  html[lang="fr"] .about__frame,
+  html[lang="en"] .about__frame { height: 440px; padding: 36px 25px 22px; }
+  html[lang="fr"] .about__vertical,
+  html[lang="en"] .about__vertical {
+    top: 21px;
+    inset-inline: 12px;
+    font-size: clamp(6.3px, calc(.52vw + 4.9px), 7.5px);
+    letter-spacing: .03em;
+    padding-bottom: 13px;
+  }
+  html[lang="fr"] .about__message,
+  html[lang="en"] .about__message { padding-top: 21px; }
+  html[lang="fr"] .about__quote-mark,
+  html[lang="en"] .about__quote-mark { font-size: 48px; margin-bottom: 8px; }
+  html[lang="fr"] .about__frame p,
+  html[lang="en"] .about__frame p {
+    font-size: 20px;
+    line-height: 1.42;
+    margin-bottom: 16px;
+  }
+}
