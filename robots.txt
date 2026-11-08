@@ -1,2 +1,1 @@
-User-agent: *
-Allow: /
+User-agent: *\nAllow: /\n\n# Add a Sitemap directive after the live domain and sitemap URL are confirmed.\n
