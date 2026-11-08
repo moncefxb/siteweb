@@ -110,3 +110,11 @@
 :root[lang="fr"] .about__frame p,
 :root[lang="en"] .about__quote-mark,
 :root[lang="en"] .about__frame p{transform:translateX(22px)}
+
+
+/* French motto: keep it on one clean line and prevent it from reaching the quote. */
+:root[lang="fr"] .about__vertical {
+  white-space: nowrap;
+  font-size: 8px;
+  letter-spacing: .12em;
+}
