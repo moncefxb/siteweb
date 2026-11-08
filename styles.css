@@ -264,3 +264,122 @@ html[lang="en"] .about__frame-index {
     margin-bottom: 16px;
   }
 }
+
+
+/* FINAL FIX — give the motto its own class, avoiding legacy vertical rules.
+   Keep the existing horizontal presentation for Arabic; English/French receive
+   a dedicated, better-spaced zone above the quotation. */
+.about__motto {
+  position: absolute;
+  top: 29px;
+  inset-inline: 18px;
+  width: auto;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--gold);
+  font-size: clamp(6.2px, calc(.58vw + 5px), 8.5px);
+  font-weight: 650;
+  letter-spacing: .045em;
+  line-height: 1.4;
+  padding: 0 0 13px;
+  border-bottom: 1px solid rgba(217,187,128,.25);
+  z-index: 4;
+}
+
+.about__motto span { display: inline; white-space: nowrap; }
+
+@media (max-width: 560px) {
+  .about__motto {
+    top: 22px;
+    inset-inline: 13px;
+    font-size: clamp(6.2px, calc(.58vw + 5px), 7.4px);
+    letter-spacing: .025em;
+    padding-bottom: 10px;
+  }
+}
+
+html[lang="fr"] #about .about__frame > .about__motto,
+html[lang="en"] #about .about__frame > .about__motto {
+  position: absolute !important;
+  top: 34px !important;
+  inset-inline: 32px !important;
+  width: auto !important;
+  height: auto !important;
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  transform: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  color: var(--gold) !important;
+  font-size: clamp(7px, .62vw + 5px, 8.5px) !important;
+  font-weight: 650 !important;
+  letter-spacing: .035em !important;
+  line-height: 1.4 !important;
+  padding: 0 0 17px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(217,187,128,.32) !important;
+  z-index: 5 !important;
+}
+
+html[lang="fr"] #about .about__frame > .about__motto span,
+html[lang="en"] #about .about__frame > .about__motto span {
+  display: inline !important;
+  white-space: nowrap !important;
+}
+
+html[lang="fr"] #about .about__frame > .about__message,
+html[lang="en"] #about .about__frame > .about__message {
+  display: flex !important;
+  flex: 0 1 auto !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  position: relative !important;
+  z-index: 3 !important;
+  min-width: 0 !important;
+  margin-top: auto !important;
+  padding-top: 27px !important;
+  border-top: 1px solid rgba(217,187,128,.3) !important;
+}
+
+html[lang="fr"] #about .about__frame > .about__message p,
+html[lang="en"] #about .about__frame > .about__message p {
+  max-width: 100% !important;
+  margin: 0 0 20px !important;
+  line-height: 1.42 !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  hyphens: auto;
+  text-wrap: pretty;
+}
+
+@media (max-width: 560px) {
+  html[lang="fr"] #about .about__frame > .about__motto,
+  html[lang="en"] #about .about__frame > .about__motto {
+    top: 23px !important;
+    inset-inline: 16px !important;
+    font-size: clamp(6.2px, 1.7vw, 7.1px) !important;
+    letter-spacing: .012em !important;
+    padding-bottom: 12px !important;
+  }
+
+  html[lang="fr"] #about .about__frame > .about__message,
+  html[lang="en"] #about .about__frame > .about__message {
+    padding-top: 21px !important;
+  }
+
+  html[lang="fr"] #about .about__frame > .about__message p,
+  html[lang="en"] #about .about__frame > .about__message p {
+    font-size: 19px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 15px !important;
+  }
+}
