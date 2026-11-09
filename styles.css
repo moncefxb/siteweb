@@ -118,3 +118,35 @@
   font-size: 8px;
   letter-spacing: .12em;
 }
+
+
+/* Refined interaction states: replace the browser's default blue tap flash with a restrained gold accent. */
+:where(a, button, summary, input, select, textarea, [role=menuitemradio]) {
+  -webkit-tap-highlight-color: rgba(177, 141, 88, .16);
+}
+:where(button, a, summary, input, select, textarea):focus-visible {
+  outline: 2px solid #b18d58;
+  outline-offset: 3px;
+}
+.language-trigger:focus-visible,
+.language-menu button:focus-visible,
+.faq-item summary:focus-visible {
+  color: #927348;
+  background-color: rgba(177, 141, 88, .08);
+}
+.language-menu button:active,
+.faq-item summary:active {
+  color: #927348;
+}
+.form-row .is-invalid,
+.form-row input.is-invalid,
+.form-row select.is-invalid {
+  border-color: #a65d4f;
+  box-shadow: 0 0 0 2px rgba(166, 93, 79, .10);
+}
+.consent input.is-invalid {
+  outline: 2px solid #a65d4f;
+  outline-offset: 2px;
+}
+.form-status[data-state=error] { color: #a65d4f; }
+.form-status[data-state=success] { color: #6f805d; }
