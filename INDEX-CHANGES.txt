@@ -1,0 +1,10 @@
+1) In index.html, find the existing line:
+   <script src="/app.js?v=20261108-1305" defer></script>
+
+   Add this immediately after it:
+   <script src="/contact-api.js" defer></script>
+
+2) Inside the existing <form id="consultationForm" novalidate>, add this hidden honeypot input immediately after the opening form tag:
+   <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
+
+No other index.html changes are required. contact-api.js replaces the old demo submit handler at runtime and updates the disclaimer in Arabic, French, and English.
